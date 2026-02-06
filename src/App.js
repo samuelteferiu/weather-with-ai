@@ -10,6 +10,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-root">
+        <header className="app-header">
+          <div className="header-inner">
+            <div className="header-logo">WeatherApp</div>
+          </div>
+        </header>
         <Sidebar />
         <main className="main-content">
           <Routes>
