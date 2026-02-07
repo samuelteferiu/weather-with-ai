@@ -173,3 +173,60 @@
   border-radius: 8px;
   padding: 20px;
 }
+
+/* Home page grid layout */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "tl tr"
+    "bl br";
+  gap: 18px;
+}
+
+.tile {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 16px;
+  border-radius: 8px;
+  color: #e6eef8;
+}
+.tile-tl { grid-area: tl; }
+.tile-tr { grid-area: tr; }
+.tile-bl { grid-area: bl; }
+.tile-br { grid-area: br; }
+
+.today-weather { display:flex; align-items:center; gap:12px; }
+.today-weather .temp { font-size:36px; font-weight:700; }
+.today-weather .summary { color:#cbd5e1; }
+
+.four-hour-diff { margin-top:12px; color:#9fb4d6; }
+
+.stat { font-size:20px; margin-bottom:12px; }
+.position { margin-bottom:8px; color:#cbd5e1; }
+.btn { background:#1e3a8a; color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+
+.multi-days { margin-top:16px; display:flex; gap:12px; }
+.days { flex:1; background:rgba(255,255,255,0.02); padding:8px; border-radius:6px; }
+
+.links { display:flex; flex-direction:column; gap:8px; margin-top:8px; }
+.desc-link { color:#a6d1ff; text-decoration:underline; }
+.note { margin-top:10px; color:#9fb4d6; font-size:13px; }
+
+/* Map page styles */
+.map-page .map-grid { display:flex; gap:18px; align-items:flex-start; margin-top:12px; }
+.globe { width: 420px; height: 320px; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#012,#023); border-radius:8px; }
+.globe-svg { width:90%; height:90%; }
+.country-list { flex:1; max-width:420px; }
+.country-list ul { list-style:none; padding:0; margin:8px 0 12px 0; display:flex; flex-direction:column; gap:8px; }
+.country-btn { background:transparent; color:#a6d1ff; border:1px solid rgba(166,209,255,0.08); padding:8px 10px; border-radius:6px; cursor:pointer; text-align:left; }
+.selected-card { margin-top:12px; background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; }
+.loader { color:#9fb4d6; }
+.error { color:#ff8a8a; }
+.btn-link { display:inline-block; margin-top:8px; color:#fff; background:#1e3a8a; padding:6px 10px; border-radius:6px; text-decoration:none; }
+.hint { margin-top:12px; color:#9fb4d6; }
+
+.geo-card { padding:16px; background:rgba(255,255,255,0.02); border-radius:8px; }
+.temp-large { font-size:40px; font-weight:700; margin:8px 0; }
+.details { list-style:none; padding:0; color:#cbd5e1; }
